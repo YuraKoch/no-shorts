@@ -41,9 +41,9 @@ function hideShortsButtonFromToolbar() {
 }
 
 function hideShortsSection() {
-  const sections = document.querySelectorAll('ytd-item-section-renderer');
+  const sections = document.querySelectorAll('ytd-item-section-renderer, ytd-rich-section-renderer');
   sections.forEach(section => {
-    const titleElement = section.querySelector('ytd-reel-shelf-renderer #title');
+    const titleElement = section.querySelector('#title');
     if (titleElement && titleElement.textContent.toLowerCase().includes('shorts')) {
       section.style.display = 'none';
     }
